@@ -46,7 +46,7 @@ function CardDetails({ route, navigation }) {
         </>
       ) : null}
       <View style={styles.cardData}>
-        <Text style={styles.cardDataText}>Данные карты:</Text>
+        <Text style={styles.cardDataText}>Номер карты:</Text>
         <Text style={styles.cardDataText}>{data.number || "Номер карты"}</Text>
       </View>
       <TouchableOpacity onPress={handleDelete} style={styles.deleteButton}>
@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
   },
   cardDataText: {
     fontSize: 18,
+    marginTop: 20,
   },
   deleteButton: {
     backgroundColor: "red",
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   barcode: {
-    width: "90%",
+    width: "100%",
     height: 60,
     resizeMode: "contain",
     marginVertical: 10,

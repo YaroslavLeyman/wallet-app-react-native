@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Text } from "@ui-kitten/components";
-import { Image, StyleSheet, TouchableOpacity } from "react-native";
+import { Image, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 function DiscountItem({ data }) {

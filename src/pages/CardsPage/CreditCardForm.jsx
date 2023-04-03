@@ -13,7 +13,10 @@ const isValidName = (name) => {
 
 const isValidCvv = (cvv) => /^[0-9]{3,4}$/.test(cvv);
 
-export const CreditCardForm = () => {
+const isValidCardNumber = (cardNumber) =>
+  /^[0-9]{16}$/.test(cardNumber.replace(/ /g, ""));
+
+export const CreditCardForm = ({ onSave, onCancel }) => {
   const [cardNumber, setCardNumber] = useState("");
   const [cardHolderName, setCardHolderName] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
@@ -32,6 +35,11 @@ export const CreditCardForm = () => {
       .replace(/(\d{4})/g, "$1 ")
       .trim();
     setCardNumber(formattedText);
+    let isValid = isValidCardNumber(formattedText);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      cardNumber: isValid ? "" : "Пожалуйста, введите номер карты.",
+    }));
   };
 
   const handleCardHolderNameChange = (text) => {
@@ -39,7 +47,7 @@ export const CreditCardForm = () => {
     let isValid = isValidName(text);
     setErrors((prevErrors) => ({
       ...prevErrors,
-      cardHolderName: isValid ? "" : "Invalid name",
+      cardHolderName: isValid ? "" : "Неверное имя",
     }));
   };
 
@@ -48,27 +56,39 @@ export const CreditCardForm = () => {
       .replace(/[^0-9/]/g, "")
       .replace(/(^\d{2}$)/g, "$1/");
     setExpiryDate(formattedText);
+    let isValid = formattedText.length === 5 && formattedText.charAt(2) === "/";
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      expiryDate: isValid ? "" : "Пожалуйста, введите в формате (MM/YY).",
+    }));
+  };
+
+  const handleCvvChange = (text) => {
+    setCvv(text);
+    let isValid = isValidCvv(text);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      cvv: isValid ? "" : "Пожалуйста, введите CVV.",
+    }));
   };
 
   const handleSave = () => {
     let validationErrors = {
-      cardNumber:
-        cardNumber.replace(/ /g, "").length === 16
-          ? ""
-          : "Please enter a 16-digit card number.",
-      cardHolderName: isValidName(cardHolderName) ? "" : "Invalid name",
+      cardNumber: isValidCardNumber(cardNumber)
+        ? ""
+        : "Пожалуйста, введите номер карты.",
+      cardHolderName: isValidName(cardHolderName) ? "" : "Неверное имя",
       expiryDate:
         expiryDate.length === 5 && expiryDate.charAt(2) === "/"
           ? ""
-          : "Please enter a valid expiry date (MM/YY).",
-      cvv: isValidCvv(cvv) ? "" : "Please enter a valid CVV.",
+          : "Пожалуйста, введите в формате (MM/YY).",
+      cvv: isValidCvv(cvv) ? "" : "Пожалуйста, введите CVV.",
     };
 
     setErrors(validationErrors);
 
     if (Object.values(validationErrors).every((error) => error === "")) {
-      // Save credit card information
-      console.log({
+      onSave({
         cardNumber,
         cardHolderName,
         expiryDate,
@@ -81,15 +101,16 @@ export const CreditCardForm = () => {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder="Card Number"
+        placeholder="Номер карты"
         keyboardType="numeric"
         maxLength={19}
         onChangeText={handleCardNumberChange}
         value={cardNumber}
       />
+      <Text style={styles.errorText}>{errors.cardNumber}</Text>
       <TextInput
         style={styles.input}
-        placeholder="Cardholder Name"
+        placeholder="Владелец карты"
         onChangeText={handleCardHolderNameChange}
         value={cardHolderName}
       />
@@ -108,14 +129,17 @@ export const CreditCardForm = () => {
           placeholder="CVV"
           keyboardType="numeric"
           maxLength={4}
-          onChangeText={setCvv}
+          onChangeText={handleCvvChange}
           value={cvv}
         />
       </View>
       <Text style={styles.errorText}>{errors.expiryDate}</Text>
       <Text style={styles.errorText}>{errors.cvv}</Text>
       <TouchableOpacity onPress={handleSave} style={styles.saveButton}>
-        <Text style={styles.saveButtonText}>Save</Text>
+        <Text style={styles.saveButtonText}>Сохранить</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onCancel} style={styles.cancelButton}>
+        <Text style={styles.cancelButtonText}>Закрыть</Text>
       </TouchableOpacity>
     </View>
   );
@@ -153,11 +177,20 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 16,
   },
-
   errorText: {
     color: "red",
     marginBottom: 15,
     fontSize: 14,
   },
+  cancelButton: {
+    backgroundColor: "red",
+    borderRadius: 7,
+    padding: 10,
+    alignItems: "center",
+    marginTop: 10,
+  },
+  cancelButtonText: {
+    color: "white",
+    fontSize: 16,
+  },
 });
-
