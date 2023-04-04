@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   },
   barcode: {
     width: "100%",
-    height: 60,
+    height: 80,
     resizeMode: "contain",
     marginVertical: 10,
   },
