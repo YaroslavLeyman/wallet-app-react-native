@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { addImage } from "../../redux/actions/imageActions";
 
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { Text, Input, Layout } from "@ui-kitten/components";
 
 const useInputState = (initialValue = "") => {
@@ -11,12 +12,15 @@ const useInputState = (initialValue = "") => {
   return { value, onChangeText: setValue };
 };
 
-function DiscountLoader({ onSave }) {
+function DiscountLoader({ onSave, savedCardsCount }) {
   const [resourcePath, setResourcePath] = useState(null);
-  const [isTextVisible, setTextVisible] = useState(true);
 
   const nameInputState = useInputState();
   const numberInputState = useInputState();
+
+  const navigation = useNavigation();
+
+  const isTextVisible = resourcePath === null;
 
   const dispatch = useDispatch();
 
@@ -32,7 +36,6 @@ function DiscountLoader({ onSave }) {
 
     if (!result.canceled) {
       setResourcePath(result.assets[0]);
-      setTextVisible(false);
     }
   };
 
@@ -48,7 +51,6 @@ function DiscountLoader({ onSave }) {
 
     if (!result.canceled) {
       setResourcePath(result.assets[0]);
-      setTextVisible(false);
     }
   };
 
@@ -61,6 +63,11 @@ function DiscountLoader({ onSave }) {
       })
     );
     console.log("Image and data saved:", resourcePath.uri);
+    if (savedCardsCount >= 1) {
+      navigation.navigate("DiscountPage");
+    } else {
+      navigation.navigate("DiscountPage");
+    }
     if (onSave) {
       onSave();
     }
@@ -79,8 +86,9 @@ function DiscountLoader({ onSave }) {
         {resourcePath && <Text style={{ alignItems: "center" }}></Text>}
         {isTextVisible && (
           <Text style={styles.text}>
-            Здесь будут Ваши дисконтные карты, сделайте фото карты или добавьте
-            из галереи устройства
+            {savedCardsCount === 0
+              ? "Здесь будут Ваши дисконтные карты, сделайте фото карты или добавьте из галереи устройства"
+              : "Сделайте фото карты или выберите из галереи устройства"}
           </Text>
         )}
         <TouchableOpacity onPress={cameraLaunch} style={styles.button}>
@@ -131,7 +139,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "white",
-    paddingTop: "50%"
+    paddingTop: 20
   },
   mainContainer: {
     width: "80%",
@@ -142,6 +150,8 @@ const styles = StyleSheet.create({
   text: {
     textAlign: "center",
     fontSize: 16,
+    alignSelf: "center",
+    marginTop: "50%",
   },
   button: {
     width: "80%",
