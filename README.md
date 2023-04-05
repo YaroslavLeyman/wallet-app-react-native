@@ -6,11 +6,11 @@ Stack: React-Native, Redux, Expo, UI-Kitten
 
 ## Главные страницы ("Дисконты", "Банковские карты", "Кешбэк")
 1
-<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/DiscountPage.jpg" width="250" />
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/DiscountPage.jpg" width="225" />
 2
-<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/BankPage.jpg" width="250" />
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/BankPage.jpg" width="225" />
 3
-<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/CashBackPage.jpg" width="250" />
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/CashBackPage.jpg" width="225" />
 
 ### Страница "Дисконты"
 
@@ -24,12 +24,14 @@ Stack: React-Native, Redux, Expo, UI-Kitten
 7. Возможность удаления карты, с всплывающим окном уточнения.
 8. Маршруты настроены так, что из раздела данных карты можно выйти назад по стрелке вверху экрана или по клику на карту.
 
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/DiscountPage.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/1.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/2.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/3.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/4.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/5.jpg)
+1
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/DiscountPage.jpg" width="225" />
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/1.jpg" width="225" />
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/2.jpg" width="225" />
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/3.jpg" width="225" />
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/4.jpg" width="225" />
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/5.jpg" width="225" />
+
 
 ### Страница "Банковские карты"
 
