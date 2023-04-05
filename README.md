@@ -26,10 +26,15 @@ Stack: React-Native, Redux, Expo, UI-Kitten
 
 1
 <img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/DiscountPage.jpg" width="225" />
+2
 <img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/1.jpg" width="225" />
+3
 <img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/2.jpg" width="225" />
+4
 <img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/3.jpg" width="225" />
+5
 <img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/4.jpg" width="225" />
+6
 <img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/5.jpg" width="225" />
 
 
