@@ -72,4 +72,4 @@ Stack: React-Native, Redux, Expo, UI-Kitten
 <img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/cashback/1.jpg" width="225" />
 
 
-Приложение в дальнейшем будет дорабатываться.
+### Приложение в дальнейшем будет дорабатываться.
