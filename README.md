@@ -47,20 +47,29 @@ Stack: React-Native, Redux, Expo, UI-Kitten
 4. Номер карты скрывается до последних 4х цифр, CVV скрывается.
 5. По клику на карту открываются данные карты, отображается весь номер карты и CVV.
 
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/BankPage.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/1.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/2.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/3.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/4.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/5.jpg)
+1
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/BankPage.jpg" width="225" />
+2
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/1.jpg" width="225" />
+3
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/2.jpg" width="225" />
+4
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/3.jpg" width="225" />
+5
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/4.jpg" width="225" />
+6
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/5.jpg" width="225" />
+
 
 ### Страница "Кешбэк"
 
 **Функционал**
 1. Функционал будет дорабатываться
 
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/cashback/CashBackPage.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/cashback/1.jpg)
+1
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/cashback/CashBackPage.jpg" width="225" />
+2
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/cashback/1.jpg" width="225" />
 
 
 Приложение в дальнейшем будет дорабатываться.
