@@ -2,24 +2,24 @@ import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const CardItem = ({
+const BankingItem = ({
   cardNumber,
   cardHolderName,
   expiryDate,
   cvv,
-  imageUri
+  imageUri,
 }) => {
   const navigation = useNavigation();
 
   const handleCardPress = () => {
-    navigation.navigate('Данные карты', {
+    navigation.navigate("Данные карты", {
       cardDetails: {
         cardNumber,
         cardHolderName,
         expiryDate,
         cvv,
         imageUri,
-      }
+      },
     });
   };
 
@@ -93,4 +93,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardItem;
+export default BankingItem;

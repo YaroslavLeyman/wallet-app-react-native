@@ -4,8 +4,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { BottomNavigation, BottomNavigationTab } from "@ui-kitten/components";
 
 import { CashBackPage } from "../../pages/CashBackPage/CashBackPage";
-import CardStackNavigator from "../../pages/CardsPage/CardStackNavigator";
-import DiscountStackNavigator from "../../pages/DiscountPage/DiscountStackNavigator";
+import BankCardStackNavigator from "./BankCardStackNavigator";
+import DiscountStackNavigator from "./DiscountStackNavigator";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -27,7 +27,7 @@ const TabNavigator = () => (
   >
     <Screen
       name="Банковcкие карты"
-      component={CardStackNavigator}
+      component={BankCardStackNavigator}
       options={{ headerShown: false }}
     />
     <Screen
@@ -43,7 +43,7 @@ const TabNavigator = () => (
   </Navigator>
 );
 
-export const BottomNavigationSimpleUsageShowcase = () => (
+export const BottomNavigationApp = () => (
   <NavigationContainer>
     <TabNavigator />
   </NavigationContainer>

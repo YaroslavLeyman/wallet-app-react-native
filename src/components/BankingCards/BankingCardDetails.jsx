@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useDispatch } from "react-redux";
 import { deleteCard } from "../../redux/actions/cardsActions";
 
-const CardBankDetails = ({ route, navigation }) => {
+const BankingCardDetails = ({ route, navigation }) => {
   const { cardDetails } = route.params;
   const dispatch = useDispatch();
 
@@ -20,9 +20,15 @@ const CardBankDetails = ({ route, navigation }) => {
         </View>
       </View>
       <View style={styles.containerText}>
-        <Text style={styles.cardHolderName}>Владелец карты: {cardDetails.cardHolderName}</Text>
-        <Text style={styles.cardNumber}>Номер карты: {cardDetails.cardNumber}</Text>
-        <Text style={styles.expiryDate}>Срок действия: {cardDetails.expiryDate}</Text>
+        <Text style={styles.cardHolderName}>
+          Владелец карты: {cardDetails.cardHolderName}
+        </Text>
+        <Text style={styles.cardNumber}>
+          Номер карты: {cardDetails.cardNumber}
+        </Text>
+        <Text style={styles.expiryDate}>
+          Срок действия: {cardDetails.expiryDate}
+        </Text>
       </View>
       <TouchableOpacity onPress={handleDelete} style={styles.deleteButton}>
         <Text style={styles.deleteButtonText}>Удалить карту</Text>
@@ -88,4 +94,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardBankDetails;
+export default BankingCardDetails;

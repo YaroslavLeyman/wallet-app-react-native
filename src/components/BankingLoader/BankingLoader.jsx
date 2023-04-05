@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const CardLoader = ({ onPress }) => {
+const BankingLoader = ({ onPress }) => {
   return (
     <View style={styles.containerContent}>
       <Text style={styles.containerContentText}>
         У Вас еще нет сохраненных карт
       </Text>
       <TouchableOpacity style={styles.buttonAdd} onPress={onPress}>
-        <Text style={styles.buttonAddText}>Добавить +</Text>
+        <Text style={styles.buttonAddText}>Добавить</Text>
       </TouchableOpacity>
     </View>
   );
@@ -18,8 +18,9 @@ const styles = StyleSheet.create({
   containerContent: {
     height: "100%",
     alignItems: "center",
-    justifyContent: "center",
+    paddingTop: "50%",
     gap: 20,
+    backgroundColor: "white",
   },
   containerContentText: {
     fontSize: 20,
@@ -37,5 +38,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardLoader;
-
+export default BankingLoader;
