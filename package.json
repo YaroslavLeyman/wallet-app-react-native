@@ -24,7 +24,7 @@
     "expo-status-bar": "~1.4.4",
     "lodash": "^4.17.21",
     "react": "18.2.0",
-    "react-native": "0.71.4",
+    "react-native": "0.71.6",
     "react-native-barcode-builder": "^2.0.0",
     "react-native-barcode-generator": "^0.3.1",
     "react-native-credit-card-input": "^0.4.1",

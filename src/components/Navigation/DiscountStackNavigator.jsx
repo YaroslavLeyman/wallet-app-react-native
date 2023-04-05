@@ -1,8 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import DiscountPage from './DiscountPage';
-import CardDetails from './CardDetails';
-import DiscountLoader from './DiscountLoader';
+import DiscountPage from '../../pages/DiscountPage/DiscountPage';
+import DiscountCardDetails from '../DiscountCards/DiscountCardDetails';
+import DiscountLoader from '../DiscountLoader/DiscountLoader';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +14,7 @@ function DiscountStackNavigator() {
         component={DiscountPage}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="Данные карты" component={CardDetails} />
+      <Stack.Screen name="Данные карты" component={DiscountCardDetails} />
       <Stack.Screen name="Добавление карты" component={DiscountLoader} />
     </Stack.Navigator>
   );

@@ -9,15 +9,19 @@ const imagesReducer = (state = initialState, action) => {
     case ADD_IMAGE:
       return {
         ...state,
-        images: [...state.images, action.payload],
+        images: [
+          ...state.images,
+          {
+            id: new Date().getTime(),
+            ...action.payload,
+          },
+        ],
       };
-
     case DELETE_IMAGE:
       return {
         ...state,
         images: state.images.filter((image) => image.id !== action.payload),
       };
-
     default:
       return state;
   }

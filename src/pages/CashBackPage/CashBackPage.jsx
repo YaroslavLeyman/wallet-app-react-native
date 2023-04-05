@@ -1,79 +1,8 @@
-// import React from "react";
-// import { View, StyleSheet } from "react-native";
-// import { Layout, Text, Button, List } from "@ui-kitten/components";
-// import { categories } from "./categories";
-// import { CategoryCard, numColumns } from "./CategoryCard";
-
-// export const CashBackPage = () => {
-//   const renderItem = ({ item }) => (
-//     <CategoryCard title={item.title} cashback={item.cashback} />
-//   );
-
-//   return (
-//     <Layout style={styles.container}>
-//       <View style={styles.header}>
-//         <Text style={styles.title} category="h4">
-//           Как получить кешбэк до 30%?
-//         </Text>
-//         <Button style={styles.learnMoreButton}>Узнать больше</Button>
-//       </View>
-//       <Text style={styles.categoryHeader} category="h5">
-//         Категории
-//       </Text>
-//       <List
-//         style={styles.categoryList}
-//         contentContainerStyle={styles.categoryListContent}
-//         data={categories}
-//         renderItem={renderItem}
-//         numColumns={numColumns}
-//         keyExtractor={(item, index) => index.toString()}
-//       />
-//     </Layout>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     paddingTop: 35,
-//   },
-//   header: {
-//     justifyContent: "space-between",
-//     alignItems: "center",
-//     paddingHorizontal: 16,
-//     paddingBottom: 16,
-//     borderBottomWidth: 1,
-//     borderColor: "#E1E1E1",
-//     backgroundColor: "#f6f6f6",
-//     borderRadius: 8,
-//     marginHorizontal: 16,
-//     marginBottom: 24,
-//   },
-//   title: {
-//     fontWeight: "bold",
-//     textAlign: "center",
-//   },
-//   learnMoreButton: {
-//     marginTop: 15,
-//   },
-//   categoryHeader: {
-//     paddingHorizontal: 16,
-//     paddingBottom: 8,
-//     fontWeight: "bold",
-//   },
-//   categoryList: {
-//     flexGrow: 1,
-//   },
-//   categoryListContent: {
-//     paddingHorizontal: 16,
-//   },
-// });
-
 import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import { Layout, Text, Button, List, Modal } from "@ui-kitten/components";
-import { categories } from "./categories";
-import { CategoryCard, numColumns } from "./CategoryCard";
+import { categories } from "../../helpers/CashBack/categories";
+import { CategoryCard, numColumns } from "../../components/CashBack/CategoryCard";
 
 export const CashBackPage = () => {
   const [modalVisible, setModalVisible] = useState(false);

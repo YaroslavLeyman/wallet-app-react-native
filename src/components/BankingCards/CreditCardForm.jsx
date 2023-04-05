@@ -7,14 +7,14 @@ import {
   View,
 } from "react-native";
 
+const isValidCardNumber = (cardNumber) => /^[0-9]{16}$/.test(cardNumber.replace(/ /g, ""));
+
 const isValidName = (name) => {
   return /^[a-zA-Z\s]*$/.test(name);
 };
 
 const isValidCvv = (cvv) => /^[0-9]{3,4}$/.test(cvv);
 
-const isValidCardNumber = (cardNumber) =>
-  /^[0-9]{16}$/.test(cardNumber.replace(/ /g, ""));
 
 export const CreditCardForm = ({ onSave, onCancel }) => {
   const [cardNumber, setCardNumber] = useState("");

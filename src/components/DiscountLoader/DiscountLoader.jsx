@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "white",
-    paddingTop: 20
+    paddingTop: 20,
   },
   mainContainer: {
     width: "80%",

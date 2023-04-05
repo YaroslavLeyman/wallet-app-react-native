@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  Image,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 import { useDispatch } from "react-redux";
 import { deleteImage } from "../../redux/actions/imageActions";
 import QRCode from "react-native-qrcode-svg";
 
-function CardDetails({ route, navigation }) {
+function DiscountCardDetails({ route, navigation }) {
   const { data } = route.params;
   const dispatch = useDispatch();
   const [codeData, setCodeData] = useState("");
@@ -15,7 +22,10 @@ function CardDetails({ route, navigation }) {
   useEffect(() => {
     if (data.number) {
       setCodeData(data.number);
-      if (isNumeric(data.number) && (data.number.length === 12 || data.number.length === 13)) {
+      if (
+        isNumeric(data.number) &&
+        (data.number.length === 12 || data.number.length === 13)
+      ) {
         setBarcodeUri(
           `https://barcode.tec-it.com/barcode.ashx?data=${data.number}&code=Code128&multiplebarcodes=false&translate-esc=false&unit=Fit&dpi=96&imagetype=Png&rotation=0&color=%23000000&bgcolor=%23ffffff&qunit=Mm&quiet=0`
         );
@@ -26,8 +36,24 @@ function CardDetails({ route, navigation }) {
   }, [data.number]);
 
   const handleDelete = () => {
-    dispatch(deleteImage(data.id));
-    navigation.goBack();
+    Alert.alert(
+      "Подтверждение удаления",
+      "Вы точно хотите удалить карту?",
+      [
+        {
+          text: "Нет",
+          style: "cancel",
+        },
+        {
+          text: "Да",
+          onPress: () => {
+            dispatch(deleteImage(data.id));
+            navigation.goBack();
+          },
+        },
+      ],
+      { cancelable: false }
+    );
   };
 
   return (
@@ -99,4 +125,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardDetails;
+export default DiscountCardDetails;
