@@ -5,9 +5,9 @@ Stack: React-Native, Redux, Expo, UI-Kitten
 Ниже представлена визуальная часть проекта.
 
 ## Главные страницы ("Дисконты", "Банковские карты", "Кешбэк")
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/pages/DiscountPage.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/pages/BankPage.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/pages/CashBackPage.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/DiscountPage.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/BankPage.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/CashBackPage.jpg)
 
 ### Страница "Дисконты"
 
@@ -21,12 +21,12 @@ Stack: React-Native, Redux, Expo, UI-Kitten
 7. Возможность удаления карты, с всплывающим окном уточнения.
 8. Маршруты настроены так, что из раздела данных карты можно выйти назад по стрелке вверху экрана или по клику на карту.
 
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/discount/DiscountPage.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/discount/1.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/discount/2.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/discount/3.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/discount/4.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/discount/5.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/DiscountPage.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/1.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/2.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/3.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/4.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/discount/5.jpg)
 
 ### Страница "Банковские карты"
 
@@ -37,20 +37,20 @@ Stack: React-Native, Redux, Expo, UI-Kitten
 4. Номер карты скрывается до последних 4х цифр, CVV скрывается.
 5. По клику на карту открываются данные карты, отображается весь номер карты и CVV.
 
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/bank/BankPage.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/bank/1.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/bank/2.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/bank/3.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/bank/4.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/bank/5.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/BankPage.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/1.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/2.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/3.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/4.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/bank/5.jpg)
 
 ### Страница "Кешбэк"
 
 **Функционал**
 1. Функционал будет дорабатываться
 
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/cashback/CashBackPage.jpg)
-![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/master/assets/images/cashback/1.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/cashback/CashBackPage.jpg)
+![Image alt](https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/cashback/1.jpg)
 
 
 Приложение в дальнейшем будет дорабатываться.
