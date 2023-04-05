@@ -5,13 +5,11 @@ Stack: React-Native, Redux, Expo, UI-Kitten
 Ниже представлена визуальная часть проекта.
 
 ## Главные страницы ("Дисконты", "Банковские карты", "Кешбэк")
-<picture display="flex">
-  <img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/DiscountPage.jpg" width="300" />
-  <img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/BankPage.jpg" width="300" />
-</picture>
-<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/DiscountPage.jpg" width="300" />
-<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/BankPage.jpg" width="300" />
-<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/CashBackPage.jpg" width="300" />
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/DiscountPage.jpg" width="250" />
+##
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/BankPage.jpg" width="250" />
+##
+<img src="https://github.com/YaroslavLeyman/wallet-app-react-native/raw/master/assets/images/pages/CashBackPage.jpg" width="250" />
 
 ### Страница "Дисконты"
 
